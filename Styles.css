@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* * {       Можно обращаться ко всем элементам и менять свойства.
+    padding: 0; 
+    margin: 0;;
+} */
+
+body {
+    background-color: #f1f1f1;
+    color:black;
+
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+
+    /* font: normal 20px 'Roboto', sans-serif; можно задавать свойства шрифта одной командой */
+    
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    
+}
+
+a {
+    color: black;
+    text-decoration: none
+    /* text-decoration: none; в данном случае что бы убрать подчеркивания у ссылок */
+}
+
+/* a:hover состояние элемента(в данном случае ссылки) при наведении на него курсором*/
+a:hover {
+    text-decoration: underline;
+    /* text-decoration: underline; делаеет что бы при наведении ссылки были подчеркнуты */
+}
+
+/* a:active { состояние при нажатии на ссылку
+    color:blue 
+} */
+
+a:active {
+    color:red
+}
+
+/* a:visited {   состояние ссылки после того как по ней перешли 
+    color: gray; в данном случае цвет ссылки меняется на сеерый
+} */
+
+a:visited {
+    color: gray;
+}
+
+.venom {
+    width: 230px;
+    border-radius: 28px;
+    box-shadow: -5px 3px 20px rgba(0, 0, 0, 025);
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.info-text {
+    margin: 40px;
+    }
+
+.info-text h4 {
+    margin-bottom: 10px;
+}
+
+
+
+
+.info p {
+    color: grey;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-transform: none;
+    /* letter-spacing: 15px; расстояние между буквами */
+    /* text-transform: capitalize; все большие буквы */
+    /* text-transform: lowercase; все маленькие буквы */
+    /* text-decoration: underline; подчеркнутые */
+}
+
+/* Box-Model */
+.container {
+    max-width: 750px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* .social {
+    background: green;
+    padding: 15px;
+    border: 5px solid red;
+    border-bottom-style: dotted;
+    border-top-width: 15px;
+    border-right-color: blue;
+    margin: 20px; */
+    /* padding: 15px 40px; 15 сверху и снизу 40 по бокам можно указывать все 4 стороны или каждую отдельно */
+    /* margin: 20px; внешние отступы */
+    /* border: 5px solid red рамка*/
+    /* padding: 15px; внутренние отступы */
+
+
+/* .box-model > div { только внутри дива бокс модел
+    float: left; что бы дивы шли в линию а не в колонку
+    background: black;
+    height: 200px;
+    width: 25%;
+    border: 4px solid red;
+    box-sizing: border-box; что бы рамки не выходили за указанный размер дивов
+} */
+
+.bg-yellow {
+    background: #fff9dc ;
+}
+
+.bg-green {
+    background: #e5ffe7 ;
+}
+
+.bg-red {
+    background: #ffe5e5 ;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    /* margin-bottom: 20px; отступ снизу */
+    /* border-radius: 20px; закругленные границы */
+}
+.card h2 {
+    margin-bottom: 10px;
+}
+.list {
+    padding: 0 20px;
+    /* list-style: 0; можно превратить список в обычныый текст */
+}
+
+/* .list li {           обращеение к строкам в списке
+    color: #86899f;
+    margin-bottom: 10px;
+    
+} */
+
+.list li {
+    color: #86899f;
+    margin-bottom: 10px;
+    }
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+/* .tabel td:nth-child(2), .tabel td:nth-child(3) числами выбирается колонка nth-child псевдо селектр который позволяет выбирать отдельные элементы одного класса [ */
+
+.table td:nth-child(2),
+.table td:nth-child(3) {
+    color: #86898f;
+}
+
+.link-list {
+    list-style: none;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    /* padding: 0; убрать отступы по умолчанию */
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;   
+    border-bottom: 1px solid #ccc;
+    color: black;
+    padding: 15px 0 10px;
+    outline: none;
+    font-family: inherit;
+    background: transparent;
+    /* font-family: inherit; наследует шрифт */
+    /* background: transparent; делает инпут прозрачным */
+}
+
+.row {
+    display: flex; 
+    margin-bottom: 20px;
+    /* display: flex; объединяет инпуты в одну строчку   */
+}
+
+.row > .form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.btn {
+    background: black;
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.position {
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 300px;
+}
+
+.box {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    right: 50px;
+    width: 100%;
+    height: 50px;
+    background: lightcoral;
+}
